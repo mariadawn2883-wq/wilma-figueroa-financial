@@ -1,147 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilma Figueroa | Financial Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#fff8fa;color:#173b2e;line-height:1.6}
-nav{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:white;position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #0001}
-.logo{font-size:22px;font-weight:bold}
-.logo small{display:block;color:#d58c9e;font-size:11px;letter-spacing:2px}
-nav a{color:#173b2e;text-decoration:none;margin-left:20px}
-.hero{padding:70px 8%;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;background:#f7e8eb}
-.hero img{width:100%;border-radius:25px}
-.tag{color:#d58c9e;text-transform:uppercase;letter-spacing:3px;font-weight:bold;font-size:12px}
-h1{font-family:Georgia,serif;font-size:55px;line-height:1.1;margin:15px 0;color:#173b2e}
-h1 span{color:#d58c9e}
-p{color:#596860;margin-bottom:25px}
-.btn{display:inline-block;background:#173b2e;color:white;padding:14px 25px;border-radius:30px;text-decoration:none;font-weight:bold}
-section{padding:70px 8%}
-.title{text-align:center;max-width:700px;margin:0 auto 40px}
-h2{font-family:Georgia,serif;font-size:38px;margin:10px 0;color:#173b2e}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;padding:30px;border-radius:20px;border:1px solid #edd8de;box-shadow:0 8px 25px #173b2e10}
-.card h3{font-family:Georgia,serif;font-size:24px;margin-bottom:10px;color:#173b2e}
-.number{color:#d58c9e;font-size:28px;font-weight:bold}
-.why{background:#173b2e;color:white}
-.why h2{color:white}
-.why p{color:#dbe7e1}
-.contact{background:#f7e8eb;text-align:center}
-form{max-width:600px;margin:auto;background:white;padding:30px;border-radius:20px}
-input,textarea,select{width:100%;padding:14px;margin-bottom:14px;border:1px solid #ddd;border-radius:10px;font-size:15px}
-textarea{height:120px}
-button{border:0;cursor:pointer;font-size:15px}
-footer{background:#102a21;color:white;text-align:center;padding:25px}
+  <title>Wilmaris Figueroa | Financial Services</title>
 
-@media(max-width:750px){
-.hero{grid-template-columns:1fr;padding:45px 6%}
-.hero img{order:-1}
-h1{font-size:43px}
-.cards{grid-template-columns:1fr}
-nav a{display:none}
-section{padding:55px 6%}
-}
-</style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffdf9;
+      color: #263d2d;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f7d9e8, #dcefd8);
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      font-weight: normal;
+    }
+
+    nav a {
+      color: #263d2d;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 70px 7%;
+      background: linear-gradient(
+        135deg,
+        #f8dce9 0%,
+        #fffdf9 55%,
+        #d9ecd5 100%
+      );
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .eyebrow {
+      color: #62875f;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      color: #263d2d;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: #526257;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      background: #557d58;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      background: #3f6543;
+    }
+
+    .hero-image {
+      flex: 0 0 380px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 30px;
+      box-shadow: 0 20px 50px rgba(50, 70, 50, .18);
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .about {
+      background: #fffdf9;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 20px auto 0;
+      color: #617064;
+    }
+
+    h2 {
+      font-size: 38px;
+      color: #263d2d;
+      margin-bottom: 15px;
+    }
+
+    .opportunity {
+      background: #edf6ea;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      box-shadow: 0 8px 25px rgba(50, 70, 50, .08);
+    }
+
+    .number {
+      color: #d58eac;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #68766b;
+    }
+
+    .why {
+      text-align: center;
+      background: #f9e7ef;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #fffdf9, #e4f1df);
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 35px auto 0;
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 35px rgba(50, 70, 50, .1);
+      text-align: left;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 14px;
+      border: 1px solid #d8dfd7;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    form .btn {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    #success-message {
+      display: none;
+      margin-top: 18px;
+      padding: 15px;
+      border-radius: 12px;
+      background: #e1f1df;
+      color: #315c36;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #263d2d;
+      color: white;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding-top: 50px;
+      }
+
+      .hero-image {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-<div class="logo">Wilma Figueroa<small>FINANCIAL SERVICES</small></div>
-<div>
-<a href="#about">About</a>
-<a href="#opportunity">Opportunity</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
+<header>
+  <div class="logo">
+    Wilmaris Figueroa
+    <span>FINANCIAL SERVICES</span>
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#opportunity">Opportunity</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
 <section class="hero">
-<div>
-<div class="tag">Your future. Your direction.</div>
-<h1>Build a future <span>that feels like yours.</span></h1>
-<p>Explore an opportunity to learn, grow, and create new possibilities while building around the life you already have.</p>
-<a class="btn" href="#contact">Let's Connect</a>
-</div>
+  <div class="hero-text">
 
-<img src="file_00000000fd5081f5a0708bf3af20abf2.png" alt="Wilma Figueroa">
+    <div class="eyebrow">
+      YOUR FUTURE. YOUR DIRECTION.
+    </div>
+
+    <h1>
+      Build a future that feels like yours.
+    </h1>
+
+    <p>
+      Explore an opportunity to learn, grow, and create new possibilities
+      while building around the life you already have.
+    </p>
+
+    <a href="#contact" class="btn">
+      Let's Connect
+    </a>
+
+  </div>
+
+  <div class="hero-image">
+    <img
+      src="file_0000000086b881f597ac4462978ea6e6.png"
+      alt="Wilmaris Figueroa"
+    >
+  </div>
 </section>
 
-<section id="about">
-<div class="title">
-<div class="tag">Meet Wilma</div>
-<h2>A new way to think about your future.</h2>
-<p>Wilma Figueroa is passionate about helping people discover opportunities for personal and professional growth.</p>
-</div>
+<section class="about" id="about">
+
+  <div class="eyebrow">
+    MEET WILMARIS
+  </div>
+
+  <h2>
+    A new way to think about your future.
+  </h2>
+
+  <p>
+    Wilmaris Figueroa is passionate about helping people discover
+    opportunities for personal and professional growth.
+  </p>
+
 </section>
 
-<section id="opportunity">
-<div class="title">
-<div class="tag">Explore Your Options</div>
-<h2>There is room to grow.</h2>
-<p>Take the first step and learn what this opportunity could look like for you.</p>
-</div>
+<section class="opportunity" id="opportunity">
 
-<div class="cards">
+  <div class="eyebrow">
+    EXPLORE YOUR OPTIONS
+  </div>
 
-<div class="card">
-<div class="number">01</div>
-<h3>Part-Time</h3>
-<p>Build around your current schedule while learning new skills and exploring the business.</p>
-</div>
+  <h2>
+    There is room to grow.
+  </h2>
 
-<div class="card">
-<div class="number">02</div>
-<h3>Full-Time</h3>
-<p>Create a bigger commitment toward your professional and personal goals.</p>
-</div>
+  <p>
+    Take the first step and learn what this opportunity could look like for you.
+  </p>
 
-<div class="card">
-<div class="number">03</div>
-<h3>Learn & Grow</h3>
-<p>Develop new skills, connect with others, and continue building your experience.</p>
-</div>
+  <div class="cards">
 
-</div>
+    <div class="card">
+
+      <div class="number">
+        01
+      </div>
+
+      <h3>
+        Part-Time
+      </h3>
+
+      <p>
+        Build around your current schedule while learning new skills
+        and exploring the business.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="number">
+        02
+      </div>
+
+      <h3>
+        Full-Time
+      </h3>
+
+      <p>
+        Create a bigger commitment toward your professional and
+        personal goals.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="number">
+        03
+      </div>
+
+      <h3>
+        Learn & Grow
+      </h3>
+
+      <p>
+        Develop new skills, connect with others, and continue
+        building your experience.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
 <section class="why">
-<div class="title">
-<div class="tag">Why Explore It?</div>
-<h2>Growth starts with one decision.</h2>
-<p>Discover an environment focused on learning, flexibility, support, and development.</p>
-</div>
+
+  <div class="eyebrow">
+    WHY EXPLORE IT?
+  </div>
+
+  <h2>
+    Growth starts with one decision.
+  </h2>
+
+  <p>
+    Discover an environment focused on learning, flexibility,
+    support, and development.
+  </p>
+
 </section>
 
 <section class="contact" id="contact">
-<div class="title">
-<div class="tag">Take The Next Step</div>
-<h2>Let's start a conversation.</h2>
-<p>Fill out the form below and Wilma can connect with you.</p>
-</div>
 
-<form name="wilma-contact" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="wilma-contact">
-<input name="name" placeholder="Your Name" required>
-<input name="email" type="email" placeholder="Email Address" required>
-<input name="phone" placeholder="Phone Number">
-<select name="interest">
-<option>I'm interested in...</option>
-<option>Part-Time Opportunity</option>
-<option>Full-Time Opportunity</option>
-<option>Learning More</option>
-</select>
-<textarea name="message" placeholder="Tell Wilma a little about what you're looking for..."></textarea>
-<button class="btn" type="submit">Send Message</button>
-</form>
+  <div class="eyebrow">
+    TAKE THE NEXT STEP
+  </div>
+
+  <h2>
+    Let's start a conversation.
+  </h2>
+
+  <p>
+    Fill out the form below and Wilmaris can connect with you.
+  </p>
+
+  <form
+    name="wilmaris-contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    id="wilmaris-form"
+  >
+
+    <input
+      type="hidden"
+      name="form-name"
+      value="wilmaris-contact"
+    >
+
+    <p style="display:none;">
+      <label>
+        Don't fill this out:
+        <input name="bot-field">
+      </label>
+    </p>
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+    >
+
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Phone Number"
+    >
+
+    <select
+      name="interest"
+      required
+    >
+
+      <option value="">
+        I'm interested in...
+      </option>
+
+      <option value="Part-Time Opportunity">
+        Part-Time Opportunity
+      </option>
+
+      <option value="Full-Time Opportunity">
+        Full-Time Opportunity
+      </option>
+
+      <option value="Learning More">
+        Learning More
+      </option>
+
+    </select>
+
+    <textarea
+      name="message"
+      placeholder="Tell Wilmaris a little about what you're looking for..."
+    ></textarea>
+
+    <button
+      class="btn"
+      type="submit"
+    >
+      Send Message
+    </button>
+
+    <div id="success-message">
+      Thank you! Your message has been sent successfully.
+    </div>
+
+  </form>
+
 </section>
 
 <footer>
-<strong>Wilma Figueroa</strong> · Financial Services<br>
-© 2026 All Rights Reserved.
+
+  Wilmaris Figueroa · Financial Services<br>
+
+  © 2026 All Rights Reserved.
+
 </footer>
+
+<script>
+
+  const form = document.getElementById("wilmaris-form");
+
+  const successMessage =
+    document.getElementById("success-message");
+
+  form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const button =
+      form.querySelector("button");
+
+    button.disabled = true;
+
+    button.textContent = "Sending...";
+
+    const formData =
+      new FormData(form);
+
+    try {
+
+      const response = await fetch("/", {
+
+        method: "POST",
+
+        headers: {
+          "Content-Type":
+            "application/x-www-form-urlencoded"
+        },
+
+        body:
+          new URLSearchParams(formData).toString()
+
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      form.reset();
+
+      successMessage.style.display = "block";
+
+      button.textContent =
+        "Message Sent ✓";
+
+    } catch (error) {
+
+      button.disabled = false;
+
+      button.textContent =
+        "Send Message";
+
+      alert(
+        "Something went wrong sending your message. Please try again."
+      );
+
+    }
+
+  });
+
+</script>
 
 </body>
 </html>
